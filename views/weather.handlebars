@@ -1,0 +1,241 @@
+
+       
+        <script src="./API-JS-WeatherbyAPI-Ninjas.js"></script>
+      
+        
+
+
+
+   
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+      </symbol>
+    </svg>
+
+
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="aperture" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="10"></circle>
+    <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path>
+  </symbol>
+  <symbol id="cart" viewBox="0 0 16 16">
+    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+  </symbol>
+  <symbol id="chevron-right" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+  </symbol>
+</svg>
+
+<div class="container">
+  <header class="border-bottom lh-1 py-3">
+  
+  </header>
+
+  <div class="nav-scroller py-1 mb-3 border-bottom">
+   
+  </div>
+</div>
+
+<main class="container">
+  
+
+ 
+
+  <div class="row g-5">
+    <div class="col-md-8">
+    
+
+      <article class="blog-post">
+        <h2 class="display-5 link-body-emphasis mb-1">Welcome to Cropify Weather</h2>
+        <p class="blog-post-meta">A website which helps to get real time weather updates of your city.</p>
+
+        <p>
+<h3>How Weather Web Pages Can Help Farmers</h3>
+<p>Weather is one of the most important factors in agriculture. It can affect crop growth, irrigation needs, and pest and disease management. In the past, farmers had to rely on their own knowledge and experience to track weather patterns and make decisions about their crops. However, today's weather web pages provide farmers with a wealth of information that can help them make more informed decisions and improve their yields.</p>
+<p>Here are some of the ways that weather web pages can help farmers:</p>
+<ul>
+<li>Planning: Weather web pages can help farmers plan their planting, harvesting, and irrigation schedules. By knowing the historical weather patterns for their region, farmers can better predict when to plant their crops and how much water they will need. This can help them avoid crop losses due to drought or flooding.</li>
+<li>Fertilizer and pest control: Weather web pages can also help farmers optimize their fertilizer and pest control programs. By knowing the current weather conditions, farmers can determine when to apply fertilizer and what type of fertilizer to use. This can help them reduce their input costs and improve crop yields.</li>
+<li>Irrigation: Weather web pages can help farmers optimize their irrigation schedules. By knowing the current weather conditions and the water requirements of their crops, farmers can determine how much water to apply and when to apply it. This can help them save water and improve crop yields.</li>
+<li>Disaster preparedness: Weather web pages can also help farmers prepare for natural disasters. By knowing the latest weather forecasts, farmers can take steps to protect their crops from damage caused by storms, floods, and droughts.</li>
+</ul>
+<p>In addition to these benefits, weather web pages can also help farmers connect with other farmers and agricultural professionals. Many weather web pages offer forums and discussion boards where farmers can share information and learn from each other. This can be a valuable resource for farmers who are looking for new ideas or ways to improve their farming practices.</p>
+<p>The use of weather web pages in agriculture is becoming increasingly widespread. As weather technology continues to improve, farmers will have access to even more accurate and detailed weather information. This will help them make even more informed decisions about their crops and improve their yields.</p>
+<p>Here are some additional ways that weather web pages can help farmers:</p>
+<ul>
+<li>Track crop progress: Weather web pages can help farmers track the progress of their crops by providing information on temperature, precipitation, and other weather conditions. This information can be used to identify potential problems early on and take corrective action.</li>
+<li>Identify new markets: Weather web pages can help farmers identify new markets for their crops by providing information on crop prices and demand. This information can help farmers make informed decisions about where to sell their crops.</li>
+<li>Stay up-to-date on the latest agricultural research: Weather web pages can help farmers stay up-to-date on the latest agricultural research by providing links to articles, reports, and other resources. This information can help farmers improve their farming practices and increase their yields.</li>
+</ul>
+<p>Overall, weather web pages are a valuable tool for farmers. They can help farmers make more informed decisions about their crops, improve their yields, and stay ahead of the curve in the ever-changing agricultural industry.</p>
+
+
+</p>
+        <hr>
+
+        
+  </article>
+
+   
+
+      
+
+      
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-body-tertiary rounded">
+          <h4 class="fst-italic">Discription</h4>
+          <p class="mb-0">
+This web page provides information on how weather web pages can help farmers. The page includes a brief introduction to the topic, as well as a list of ways that weather web pages can help farmers. The page also includes links to additional resources for farmers who want to learn more about weather web pages.</p>
+        </div>
+
+       
+
+       
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<hr>
+
+
+<h5>Know Your City Weather Here</h5>
+
+      <!-- search button before Weather for city -->
+
+
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <form class="d-flex" role="search" id="weatherSearchForm">
+            <input class="form-control me-2"  type="search" placeholder="Search a Weather city" aria-label="Search" id="city123">
+            <button id="abc123" onclick="func1()"  class="btn btn-outline-success" type="submit" >Search</button>
+
+          </form>
+        </div>
+      </nav>
+
+      <script>
+        document.getElementById("weatherSearchForm").addEventListener("submit",function(e){e.preventDefault()})      
+        </script>
+
+
+      <h3 class="my-4 text-center">Weather for <span id="cityName"></span></h3>
+
+
+
+      
+    <!-- boot strap ->examples-> pricing code -->
+
+
+
+<div class="container">
+
+
+
+    <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Cloud PCT</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><span id="cloud_pct"></span><small class="text-muted fw-light"></small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                
+
+                  <li>Wind Speed is <span id="wind_speed"></span>km/hr</li>
+                  <li>Wind Degree is <span id="wind_degrees"></span></li>
+                  
+                  
+                </ul>
+                
+              </div>
+            </div>
+          </div>
+
+
+
+
+          
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Temperature</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><span id="temp"></span><small class="text-muted fw-light"><sup> <span>&#8451;</span> </sup></small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  
+                  <li>Min Temperature is <span id="min_temp"></span><sup> <span>&#8451;</span> </sup></li>
+                  <li>Max Temperature is <span id="max_temp"></span><sup> <span>&#8451;</span> </sup></li>
+                </ul>
+                
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Humidity</h4>
+              </div>
+              <div class="card-body">
+                
+                <h1 class="card-title pricing-card-title"><span id="humidity"></span><small class="text-muted fw-light">g.m<sup>-3</sup></small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  
+                  <li>Sunrise is <span id="sunrise"></span></li>
+                  <li>Sunset is <span id="sunset"></span></li>
+                </ul>
+                
+              </div>
+            </div>
+          </div>
+
+
+</div>
+
+
+
